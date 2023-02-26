@@ -1,5 +1,12 @@
+import ShopFilter from "../components/ShopFilter";
+
 const Shop = () => {
-  return <h1>The Shop!</h1>;
+  return (
+    <div>
+      <h1>The Shop!</h1>
+      <ShopFilter />
+    </div>
+  );
 };
 
 export default Shop;
