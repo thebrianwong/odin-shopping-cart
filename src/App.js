@@ -2,14 +2,28 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Shop from "./pages/Shop";
 import NavBar from "./components/NavBar";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [championData, setChampionData] = useState({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const rawData = await fetch(
+        "http://ddragon.leagueoflegends.com/cdn/13.4.1/data/en_US/champion.json"
+      );
+      const parsedJSON = await rawData.json();
+      const infoObject = parsedJSON.data;
+      setChampionData(infoObject);
+    };
+    fetchData();
+  }, []);
   return (
     <BrowserRouter>
       <NavBar />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route path="/shop" element={<Shop data={championData} />} />
       </Routes>
     </BrowserRouter>
   );
