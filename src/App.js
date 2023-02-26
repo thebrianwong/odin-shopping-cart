@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [championData, setChampionData] = useState({});
+  const [loadingData, setLoadingData] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,6 +16,7 @@ function App() {
       const parsedJSON = await rawData.json();
       const infoObject = parsedJSON.data;
       setChampionData(infoObject);
+      setLoadingData(false);
     };
     fetchData();
   }, []);
@@ -23,7 +25,10 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/shop" element={<Shop data={championData} />} />
+        <Route
+          path="/shop"
+          element={!loadingData ? <Shop data={championData} /> : null}
+        />
       </Routes>
     </BrowserRouter>
   );
