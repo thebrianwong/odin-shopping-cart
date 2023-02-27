@@ -1,12 +1,19 @@
+import ChampionCard from "./ChampionCard";
+
 const ShopContents = ({ shopItems }) => {
   return (
     <>
       {Object.keys(shopItems).length > 0 ? (
-        <ul>
+        <div>
           {Object.keys(shopItems).map((item) => {
-            return <li key={shopItems[item].key}>{shopItems[item].name}</li>;
+            return (
+              <ChampionCard
+                key={shopItems[item].key}
+                championData={shopItems[item]}
+              />
+            );
           })}
-        </ul>
+        </div>
       ) : (
         <div>placeholder no items text</div>
       )}
