@@ -9,7 +9,7 @@ let data;
 
 beforeAll(async () => {
   const rawData = await fetch(
-    "http://ddragon.leagueoflegends.com/cdn/13.4.1/data/en_US/champion.json"
+    "https://ddragon.leagueoflegends.com/cdn/13.4.1/data/en_US/champion.json"
   );
   const parsedJSON = await rawData.json();
   data = parsedJSON.data;
