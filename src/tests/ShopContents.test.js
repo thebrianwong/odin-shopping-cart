@@ -14,16 +14,17 @@ beforeAll(async () => {
   data = parsedJSON.data;
 });
 
-test("Renders list items from prop object", async () => {
+test("Renders list items from prop object", () => {
   render(<ShopContents shopItems={data} />);
-  const listItems = screen.getAllByRole("listitem");
-  expect(listItems.length).toBe(162);
+  const buttons = screen.getAllByRole("button");
+  expect(buttons.length).toBe(162);
 });
 
-test("Renders list items with text", async () => {
+test("Renders list items with text", () => {
   render(<ShopContents shopItems={data} />);
-  const listItems = screen.getAllByRole("listitem");
-  listItems.forEach((item) => {
-    expect(item).toHaveTextContent(/^.+$/);
+  const buttons = screen.getAllByRole("button");
+  buttons.forEach((button) => {
+    const header = button.querySelector("h1");
+    expect(header).toHaveTextContent(/^.+$/);
   });
 });
