@@ -6,7 +6,7 @@ import ShopFilter from "../components/ShopFilter";
 
 test("All labels are rendered", () => {
   render(<ShopFilter />);
-  const tags = ["Assassin", "Fighter", "Mage", "Marksmen", "Support", "Tank"];
+  const tags = ["Assassin", "Fighter", "Mage", "Marksman", "Support", "Tank"];
   const labels = [];
   for (let i = 0; i < tags.length; i++) {
     const label = screen.getByLabelText(tags[i]);
