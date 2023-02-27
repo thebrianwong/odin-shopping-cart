@@ -1,29 +1,65 @@
-const ShopFilter = () => {
+const ShopFilter = ({ addFilter, removeFilter }) => {
+  const capitalizeString = (string) => {
+    return string[0].toUpperCase() + string.slice(1);
+  };
+  const changeFilter = (e) => {
+    const checked = e.target.checked;
+    const capitalizedTag = capitalizeString(e.target.id);
+    if (checked) {
+      addFilter(capitalizedTag);
+    } else {
+      removeFilter(capitalizedTag);
+    }
+  };
   return (
     <div>
       <label htmlFor="assassin">
         Assassin
-        <input type="checkbox" id="assassin"></input>
+        <input
+          onClick={(e) => changeFilter(e)}
+          type="checkbox"
+          id="assassin"
+        ></input>
       </label>
       <label htmlFor="fighter">
         Fighter
-        <input type="checkbox" id="fighter"></input>
+        <input
+          onClick={(e) => changeFilter(e)}
+          type="checkbox"
+          id="fighter"
+        ></input>
       </label>
       <label>
         Mage
-        <input type="checkbox" id="mage"></input>
+        <input
+          onClick={(e) => changeFilter(e)}
+          type="checkbox"
+          id="mage"
+        ></input>
       </label>
       <label>
-        Marksmen
-        <input type="checkbox" id="marksmen"></input>
+        Marksman
+        <input
+          onClick={(e) => changeFilter(e)}
+          type="checkbox"
+          id="marksman"
+        ></input>
       </label>
       <label>
         Support
-        <input type="checkbox" id="support"></input>
+        <input
+          onClick={(e) => changeFilter(e)}
+          type="checkbox"
+          id="support"
+        ></input>
       </label>
       <label>
         Tank
-        <input type="checkbox" id="tank"></input>
+        <input
+          onClick={(e) => changeFilter(e)}
+          type="checkbox"
+          id="tank"
+        ></input>
       </label>
     </div>
   );
