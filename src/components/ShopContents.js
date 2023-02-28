@@ -1,6 +1,6 @@
 import ChampionCard from "./ChampionCard";
 
-const ShopContents = ({ shopItems }) => {
+const ShopContents = ({ shopItems, addToCart }) => {
   return (
     <>
       {Object.keys(shopItems).length > 0 ? (
@@ -10,6 +10,7 @@ const ShopContents = ({ shopItems }) => {
               <ChampionCard
                 key={shopItems[item].key}
                 championData={shopItems[item]}
+                addToCart={addToCart}
               />
             );
           })}

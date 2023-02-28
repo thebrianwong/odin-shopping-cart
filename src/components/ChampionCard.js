@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ChampionModal from "./ChampionModal";
 
-const ChampionCard = ({ championData }) => {
+const ChampionCard = ({ championData, addToCart }) => {
   const [displayingModal, setDisplayingModal] = useState(false);
   return (
     <>
@@ -16,6 +16,7 @@ const ChampionCard = ({ championData }) => {
         <ChampionModal
           championData={championData}
           hideModal={() => setDisplayingModal(false)}
+          addToCart={addToCart}
         />
       ) : null}
     </>
