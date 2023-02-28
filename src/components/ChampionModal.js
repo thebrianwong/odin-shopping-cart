@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const ChampionModal = ({ championData, hideModal, addToCart }) => {
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   return (
     <div>
       <img
