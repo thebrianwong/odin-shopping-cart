@@ -7,7 +7,38 @@ import { useState, useEffect } from "react";
 function App() {
   const [championData, setChampionData] = useState({});
   const [loadingData, setLoadingData] = useState(true);
-
+  const [shoppingCart, setShoppingCart] = useState({});
+  const addChampionQuantity = (champion, increment) => {
+    if (shoppingCart[champion] === undefined) {
+      setShoppingCart({
+        ...shoppingCart,
+        [champion]: Number(increment),
+      });
+    } else {
+      setShoppingCart({
+        ...shoppingCart,
+        [champion]: Number(shoppingCart[champion]) + Number(increment),
+      });
+    }
+  };
+  const changeChampionQuantity = (champion, quantity) => {
+    if (quantity === 0) {
+      const updatedCart = { ...shoppingCart };
+      delete updatedCart[champion];
+      setShoppingCart(updatedCart);
+    } else {
+      console.log(shoppingCart);
+      setShoppingCart({
+        ...shoppingCart,
+        [champion]: Number(quantity),
+      });
+    }
+  };
+  const calculateShoppingCartItems = () => {
+    return Object.keys(shoppingCart).reduce((totalItems, currentChampion) => {
+      return totalItems + shoppingCart[currentChampion];
+    }, 0);
+  };
   useEffect(() => {
     const sortData = (unsortedData) => {
       return Object.keys(unsortedData).reduce(
@@ -42,7 +73,11 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route
           path="/shop"
-          element={!loadingData ? <Shop data={championData} /> : null}
+          element={
+            !loadingData ? (
+              <Shop data={championData} addToCart={addChampionQuantity} />
+            ) : null
+          }
         />
       </Routes>
     </BrowserRouter>
