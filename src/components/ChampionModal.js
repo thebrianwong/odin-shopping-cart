@@ -1,4 +1,7 @@
-const ChampionModal = ({ championData, hideModal }) => {
+import { useState } from "react";
+
+const ChampionModal = ({ championData, hideModal, addToCart }) => {
+  const [quantity, setQuantity] = useState(0);
   return (
     <div>
       <img
@@ -8,6 +11,20 @@ const ChampionModal = ({ championData, hideModal }) => {
       <h1>{championData.name}</h1>
       <p>{championData.title}</p>
       <p>{championData.blurb + "blah blah blah, you gonna buy or what?"}</p>
+      <input
+        type={"number"}
+        value={quantity}
+        onChange={(e) => setQuantity(e.target.value)}
+      />
+      <button
+        onClick={() => {
+          if (quantity !== "" && quantity > 0) {
+            addToCart(championData.id, quantity);
+          }
+        }}
+      >
+        Add To Cart
+      </button>
       <button onClick={hideModal}>X</button>
     </div>
   );
