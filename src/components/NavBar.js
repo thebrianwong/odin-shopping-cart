@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const NavBar = ({ cartItems }) => {
+const NavBar = ({ shoppingCartQuantity }) => {
   return (
     <div>
       <Link to="/">Home</Link>
@@ -8,7 +8,9 @@ const NavBar = ({ cartItems }) => {
       <Link to="checkout">
         <button>Checkout</button>
       </Link>
-      <p className="cart-items">Number of items in cart: {cartItems}</p>
+      <p className="cart-items">
+        Number of items in cart: {shoppingCartQuantity}
+      </p>
     </div>
   );
 };

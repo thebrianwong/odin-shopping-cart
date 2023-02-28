@@ -68,7 +68,7 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
-      <NavBar />
+      <NavBar shoppingCartQuantity={calculateShoppingCartItems(shoppingCart)} />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route
