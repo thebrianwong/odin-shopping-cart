@@ -12,7 +12,7 @@ const ChampionModal = ({ championData, hideModal, addToCart }) => {
       <p>{championData.title}</p>
       <p>{championData.blurb + "blah blah blah, you gonna buy or what?"}</p>
       <input
-        type={"number"}
+        type="number"
         value={quantity}
         onChange={(e) => setQuantity(e.target.value)}
       />
