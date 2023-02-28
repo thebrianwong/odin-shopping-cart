@@ -9,13 +9,28 @@ function App() {
   const [loadingData, setLoadingData] = useState(true);
 
   useEffect(() => {
+    const sortData = (unsortedData) => {
+      return Object.keys(unsortedData).reduce(
+        (sortedData, currentChampionKey) => {
+          if (currentChampionKey === "MonkeyKing") {
+            return sortedData;
+          } else if (currentChampionKey === "Xayah") {
+            sortedData.MonkeyKing = unsortedData.MonkeyKing;
+          }
+          sortedData[currentChampionKey] = unsortedData[currentChampionKey];
+          return sortedData;
+        },
+        {}
+      );
+    };
     const fetchData = async () => {
       const rawData = await fetch(
         "https://ddragon.leagueoflegends.com/cdn/13.4.1/data/en_US/champion.json"
       );
       const parsedJSON = await rawData.json();
-      const infoObject = parsedJSON.data;
-      setChampionData(infoObject);
+      const unsortedChampionData = parsedJSON.data;
+      const sortedChampionData = sortData(unsortedChampionData);
+      setChampionData(sortedChampionData);
       setLoadingData(false);
     };
     fetchData();
