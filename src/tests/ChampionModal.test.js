@@ -19,7 +19,7 @@ beforeAll(async () => {
   aatroxData = championData.Aatrox;
 });
 
-test("Champion modal is rendered properly", () => {
+test("Champion modal is rendered properly", async () => {
   render(
     <ChampionModal
       championData={aatroxData}
@@ -27,7 +27,9 @@ test("Champion modal is rendered properly", () => {
       addToCart={addToCart}
     />
   );
-  const aatroxImage = screen.getByAltText("Loading screen banner of Aatrox");
+  const aatroxImage = await screen.findByAltText(
+    "Loading screen banner of Aatrox"
+  );
   const aatroxName = screen.getByRole("heading", { name: "Aatrox" });
   const aatroxTitle = screen.getByText("the Darkin Blade");
   const aatroxBlurb = screen.getByText(/Shurima/);
@@ -44,7 +46,7 @@ test("Champion modal is rendered properly", () => {
   expect(input).toBeInTheDocument();
 });
 
-test("Changing input value via buttons works", () => {
+test("Changing input value via buttons works", async () => {
   render(
     <ChampionModal
       championData={aatroxData}
@@ -52,7 +54,7 @@ test("Changing input value via buttons works", () => {
       addToCart={addToCart}
     />
   );
-  const buttons = screen.getAllByRole("button");
+  const buttons = await screen.findAllByRole("button");
   const input = screen.getByDisplayValue("1");
   const decrementButton = buttons[0];
   const incrementButton = buttons[1];
@@ -66,7 +68,7 @@ test("Changing input value via buttons works", () => {
   expect(input.value).toBe("1");
 });
 
-test("The input value can't be decreased past 1 with the buttons", () => {
+test("The input value can't be decreased past 1 with the buttons", async () => {
   render(
     <ChampionModal
       championData={aatroxData}
@@ -74,7 +76,7 @@ test("The input value can't be decreased past 1 with the buttons", () => {
       addToCart={addToCart}
     />
   );
-  const buttons = screen.getAllByRole("button");
+  const buttons = await screen.findAllByRole("button");
   const input = screen.getByDisplayValue("1");
   const decrementButton = buttons[0];
   expect(input.value).toBe("1");
@@ -84,7 +86,7 @@ test("The input value can't be decreased past 1 with the buttons", () => {
   expect(input.value).toBe("1");
 });
 
-test("The input value can be changed via typing", () => {
+test("The input value can be changed via typing", async () => {
   render(
     <ChampionModal
       championData={aatroxData}
@@ -92,7 +94,7 @@ test("The input value can be changed via typing", () => {
       addToCart={addToCart}
     />
   );
-  const input = screen.getByDisplayValue("1");
+  const input = await screen.findByDisplayValue("1");
   expect(input.value).toBe("1");
   input.focus();
   act(() => {
