@@ -1,8 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ChampionModal = ({ championData, hideModal, addToCart }) => {
   const [quantity, setQuantity] = useState(1);
-  return (
+  const [championLore, setChampionData] = useState("");
+  const [loadingData, setLoadingData] = useState(true);
+  useEffect(() => {
+    const fetchData = async () => {
+      const rawData = await fetch(
+        `https://ddragon.leagueoflegends.com/cdn/13.4.1/data/en_US/champion/${championData.id}.json`
+      );
+      const parsedJSON = await rawData.json();
+      const championLore = parsedJSON.data[championData.id].lore;
+      setChampionData(championLore);
+      setLoadingData(false);
+    };
+    fetchData();
+  }, []);
+  return !loadingData ? (
     <div>
       <img
         src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${championData.id}_0.jpg`}
@@ -10,7 +24,7 @@ const ChampionModal = ({ championData, hideModal, addToCart }) => {
       />
       <h1>{championData.name}</h1>
       <p>{championData.title}</p>
-      <p>{championData.blurb + "blah blah blah, you gonna buy or what?"}</p>
+      <p>{championLore}</p>
       <button
         onClick={() => {
           if (quantity >= 11) {
@@ -38,7 +52,7 @@ const ChampionModal = ({ championData, hideModal, addToCart }) => {
       </button>
       <button onClick={hideModal}>X</button>
     </div>
-  );
+  ) : null;
 };
 
 export default ChampionModal;
