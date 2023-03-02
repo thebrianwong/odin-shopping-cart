@@ -3,6 +3,7 @@ import Homepage from "./pages/Homepage";
 import Shop from "./pages/Shop";
 import NavBar from "./components/NavBar";
 import { useState, useEffect } from "react";
+import Checkout from "./pages/Checkout";
 
 function App() {
   const [championData, setChampionData] = useState({});
@@ -50,6 +51,14 @@ function App() {
       }, {});
     return sortedData;
   };
+  const sortShoppingCart = (unsortedShoppingCart) => {
+    const sortedShoppingCart = Object.keys(unsortedShoppingCart)
+      .sort()
+      .reduce((dataObject, champion) => {
+        return { ...dataObject, [champion]: unsortedShoppingCart[champion] };
+      }, {});
+    return sortedShoppingCart;
+  };
   useEffect(() => {
     const fetchData = async () => {
       const rawData = await fetch(
@@ -74,6 +83,15 @@ function App() {
             !loadingData ? (
               <Shop data={championData} addToCart={addChampionQuantity} />
             ) : null
+          }
+        />
+        <Route
+          path="checkout"
+          element={
+            <Checkout
+              data={championData}
+              shoppingCartItems={sortShoppingCart(shoppingCart)}
+            />
           }
         />
       </Routes>
