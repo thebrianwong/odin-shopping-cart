@@ -10,6 +10,9 @@ function App() {
   const [loadingData, setLoadingData] = useState(true);
   const [shoppingCart, setShoppingCart] = useState({});
   const addChampionQuantity = (champion, increment) => {
+    if (champion === "MonkeyKing") {
+      champion = "Wukong";
+    }
     if (shoppingCart[champion] === undefined) {
       setShoppingCart({
         ...shoppingCart,
