@@ -8,7 +8,7 @@ const Checkout = ({ data, shoppingCartItems }) => {
             <li key={data[champion].key}>
               <img
                 src={`https://ddragon.leagueoflegends.com/cdn/13.4.1/img/champion/${data[champion].id}.png`}
-                alt={`Square portrait of ${data[champion]}`}
+                alt={`Square portrait of ${data[champion].name}`}
               />
               {champion}: {shoppingCartItems[champion]}
             </li>
