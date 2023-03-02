@@ -39,21 +39,18 @@ function App() {
       return totalItems + shoppingCart[currentChampion];
     }, 0);
   };
+  const sortData = (unsortedData) => {
+    const wukongData = unsortedData.MonkeyKing;
+    delete unsortedData.MonkeyKing;
+    unsortedData.Wukong = wukongData;
+    const sortedData = Object.keys(unsortedData)
+      .sort()
+      .reduce((dataObject, champion) => {
+        return { ...dataObject, [champion]: unsortedData[champion] };
+      }, {});
+    return sortedData;
+  };
   useEffect(() => {
-    const sortData = (unsortedData) => {
-      return Object.keys(unsortedData).reduce(
-        (sortedData, currentChampionKey) => {
-          if (currentChampionKey === "MonkeyKing") {
-            return sortedData;
-          } else if (currentChampionKey === "Xayah") {
-            sortedData.MonkeyKing = unsortedData.MonkeyKing;
-          }
-          sortedData[currentChampionKey] = unsortedData[currentChampionKey];
-          return sortedData;
-        },
-        {}
-      );
-    };
     const fetchData = async () => {
       const rawData = await fetch(
         "https://ddragon.leagueoflegends.com/cdn/13.4.1/data/en_US/champion.json"
