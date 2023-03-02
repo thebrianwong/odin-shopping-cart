@@ -10,7 +10,9 @@ const Checkout = ({ data, shoppingCartItems }) => {
                 src={`https://ddragon.leagueoflegends.com/cdn/13.4.1/img/champion/${data[champion].id}.png`}
                 alt={`Square portrait of ${data[champion].name}`}
               />
-              {champion}: {shoppingCartItems[champion]}
+              <p>
+                {champion}: {shoppingCartItems[champion]}
+              </p>
             </li>
           );
         })}
