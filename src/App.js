@@ -31,7 +31,6 @@ function App() {
       delete updatedCart[champion];
       setShoppingCart(updatedCart);
     } else {
-      console.log(shoppingCart);
       setShoppingCart({
         ...shoppingCart,
         [champion]: Number(quantity),
@@ -94,6 +93,7 @@ function App() {
             <Checkout
               data={championData}
               shoppingCartItems={sortShoppingCart(shoppingCart)}
+              changeCartQuantity={changeChampionQuantity}
             />
           }
         />

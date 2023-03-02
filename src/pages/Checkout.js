@@ -1,6 +1,6 @@
 import CheckoutItem from "../components/CheckoutItem";
 
-const Checkout = ({ data, shoppingCartItems }) => {
+const Checkout = ({ data, shoppingCartItems, changeCartQuantity }) => {
   return (
     <div>
       <h1>Checkout</h1>
@@ -12,6 +12,7 @@ const Checkout = ({ data, shoppingCartItems }) => {
               data={data}
               champion={champion}
               quantity={shoppingCartItems[champion]}
+              changeCartQuantity={changeCartQuantity}
             />
           );
         })}
