@@ -1,3 +1,5 @@
+import CheckoutItem from "../components/CheckoutItem";
+
 const Checkout = ({ data, shoppingCartItems }) => {
   return (
     <div>
@@ -5,15 +7,12 @@ const Checkout = ({ data, shoppingCartItems }) => {
       <ul>
         {Object.keys(shoppingCartItems).map((champion) => {
           return (
-            <li key={data[champion].key}>
-              <img
-                src={`https://ddragon.leagueoflegends.com/cdn/13.4.1/img/champion/${data[champion].id}.png`}
-                alt={`Square portrait of ${data[champion].name}`}
-              />
-              <p>
-                {champion}: {shoppingCartItems[champion]}
-              </p>
-            </li>
+            <CheckoutItem
+              key={data[champion].key}
+              data={data}
+              champion={champion}
+              quantity={shoppingCartItems[champion]}
+            />
           );
         })}
       </ul>
