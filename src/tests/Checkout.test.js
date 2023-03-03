@@ -19,14 +19,18 @@ test("The shopping cart items are displayed", () => {
   render(<Checkout data={data} shoppingCartItems={shoppingCartItems} />);
   const items = screen.getAllByRole("listitem");
   const aatroxImage = screen.getByAltText("Square portrait of Aatrox");
-  const aatroxNameQuantity = screen.getByText("Aatrox: 1");
+  const aatroxName = screen.getByText("Aatrox");
+  const aatroxQuantity = screen.getByText("1");
   const ahriImage = screen.getByAltText("Square portrait of Ahri");
-  const ahriNameQuantity = screen.getByText("Ahri: 9");
+  const ahriName = screen.getByText("Ahri");
+  const ahriQuantity = screen.getByText("9");
   expect(items.length).toBe(2);
   expect(aatroxImage).toBeInTheDocument();
-  expect(aatroxNameQuantity).toBeInTheDocument();
+  expect(aatroxName).toBeInTheDocument();
+  expect(aatroxQuantity).toBeInTheDocument();
   expect(ahriImage).toBeInTheDocument();
-  expect(ahriNameQuantity).toBeInTheDocument();
+  expect(ahriName).toBeInTheDocument();
+  expect(ahriQuantity).toBeInTheDocument();
 });
 
 test("No items are displayed if the shopping cart is empty", () => {
