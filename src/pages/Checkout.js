@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CheckoutItem from "../components/CheckoutItem";
 
 const Checkout = ({ data, shoppingCartItems, changeCartQuantity }) => {
@@ -17,6 +18,9 @@ const Checkout = ({ data, shoppingCartItems, changeCartQuantity }) => {
           );
         })}
       </ul>
+      <Link to="/orderconfirmation">
+        <button>Place Order</button>
+      </Link>
     </div>
   );
 };

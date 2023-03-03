@@ -4,6 +4,7 @@ import Shop from "./pages/Shop";
 import NavBar from "./components/NavBar";
 import { useState, useEffect } from "react";
 import Checkout from "./pages/Checkout";
+import OrderConfirmation from "./pages/OrderConfirmation";
 
 function App() {
   const [championData, setChampionData] = useState({});
@@ -97,6 +98,7 @@ function App() {
             />
           }
         />
+        <Route path="orderconfirmation" element={<OrderConfirmation />} />
       </Routes>
     </BrowserRouter>
   );
