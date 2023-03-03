@@ -3,6 +3,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import Checkout from "../pages/Checkout";
+import { BrowserRouter } from "react-router-dom";
 
 let data;
 
@@ -16,7 +17,9 @@ beforeAll(async () => {
 
 test("The shopping cart items are displayed", () => {
   const shoppingCartItems = { Aatrox: 1, Ahri: 9 };
-  render(<Checkout data={data} shoppingCartItems={shoppingCartItems} />);
+  render(<Checkout data={data} shoppingCartItems={shoppingCartItems} />, {
+    wrapper: BrowserRouter,
+  });
   const items = screen.getAllByRole("listitem");
   const aatroxImage = screen.getByAltText("Square portrait of Aatrox");
   const aatroxName = screen.getByText("Aatrox");
@@ -35,7 +38,9 @@ test("The shopping cart items are displayed", () => {
 
 test("No items are displayed if the shopping cart is empty", () => {
   const shoppingCartItems = {};
-  render(<Checkout data={data} shoppingCartItems={shoppingCartItems} />);
+  render(<Checkout data={data} shoppingCartItems={shoppingCartItems} />, {
+    wrapper: BrowserRouter,
+  });
   const items = screen.queryAllByRole("listitem");
   expect(items.length).toBe(0);
 });
