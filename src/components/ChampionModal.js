@@ -25,6 +25,7 @@ const ChampionModal = ({ championData, hideModal, addToCart }) => {
       <h1>{championData.name}</h1>
       <p>{championData.title}</p>
       <p>{championLore}</p>
+      <p>Price: FREE</p>
       <button
         onClick={() => {
           if (quantity >= 11) {
