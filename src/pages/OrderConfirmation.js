@@ -1,4 +1,9 @@
-const OrderConfirmation = () => {
+import { useEffect } from "react";
+
+const OrderConfirmation = ({ clearShoppingCart }) => {
+  useEffect(() => {
+    clearShoppingCart();
+  }, []);
   return (
     <>
       <h1>Order Confirmation</h1>

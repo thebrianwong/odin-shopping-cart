@@ -43,6 +43,9 @@ function App() {
       return totalItems + shoppingCart[currentChampion];
     }, 0);
   };
+  const clearShoppingCart = () => {
+    setShoppingCart({});
+  };
   const sortData = (unsortedData) => {
     const wukongData = unsortedData.MonkeyKing;
     delete unsortedData.MonkeyKing;
@@ -98,7 +101,10 @@ function App() {
             />
           }
         />
-        <Route path="orderconfirmation" element={<OrderConfirmation />} />
+        <Route
+          path="orderconfirmation"
+          element={<OrderConfirmation clearShoppingCart={clearShoppingCart} />}
+        />
       </Routes>
     </BrowserRouter>
   );
