@@ -10,7 +10,7 @@ const Homepage = () => {
         doorsteps!!!
       </p>
       <img
-        src="https://preview.redd.it/2hj44387pmp61.png?width=640&crop=smart&auto=webp&s=be1cff6868894962f63b549d17279a2c38afaf13"
+        src={require("../assets/lollipoppy_og.png")}
         alt="cursed pre-rework splash art of Lollipoppy"
       />
       <Link to="/shop">

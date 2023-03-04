@@ -17,7 +17,7 @@ const OrderConfirmation = ({ clearShoppingCart }) => {
     <>
       <h1>Order Confirmation</h1>
       {inFakeLoading ? (
-        <img src="https://i.imgur.com/QRUPiHQ.gif" />
+        <img src={require("../assets/katarina_dance.gif")} />
       ) : (
         <>
           <h3>Congratulations, your order has been placed!</h3>
