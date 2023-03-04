@@ -17,7 +17,13 @@ const ShopContents = ({ gameVersion, shopItems, addToCart }) => {
           })}
         </div>
       ) : (
-        <div>placeholder no items text</div>
+        <>
+          <div>Poro doesn't think that sort of champion exists yet!</div>
+          <img
+            src="https://static.wikia.nocookie.net/leagueoflegends/images/4/4f/Poro_sticker_shock.png"
+            alt="surprised Poro with an exclamation mark and sweat bead"
+          />
+        </>
       )}
     </>
   );
