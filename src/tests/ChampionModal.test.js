@@ -8,6 +8,7 @@ import { act } from "react-dom/test-utils";
 const hideModal = jest.fn();
 const addToCart = jest.fn();
 
+const gameVersion = "13.4.1";
 let aatroxData;
 
 beforeAll(async () => {
@@ -22,6 +23,7 @@ beforeAll(async () => {
 test("Champion modal is rendered properly", async () => {
   render(
     <ChampionModal
+      gameVersion={gameVersion}
       championData={aatroxData}
       hideModal={hideModal}
       addToCart={addToCart}
@@ -49,6 +51,7 @@ test("Champion modal is rendered properly", async () => {
 test("Changing input value via buttons works", async () => {
   render(
     <ChampionModal
+      gameVersion={gameVersion}
       championData={aatroxData}
       hideModal={hideModal}
       addToCart={addToCart}
@@ -71,6 +74,7 @@ test("Changing input value via buttons works", async () => {
 test("The input value can't be decreased past 1 with the buttons", async () => {
   render(
     <ChampionModal
+      gameVersion={gameVersion}
       championData={aatroxData}
       hideModal={hideModal}
       addToCart={addToCart}
@@ -89,6 +93,7 @@ test("The input value can't be decreased past 1 with the buttons", async () => {
 test("The input value can be changed via typing", async () => {
   render(
     <ChampionModal
+      gameVersion={gameVersion}
       championData={aatroxData}
       hideModal={hideModal}
       addToCart={addToCart}
