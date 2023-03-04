@@ -23,7 +23,7 @@ test("Renders list items with text", () => {
   render(<ShopContents shopItems={data} />);
   const buttons = screen.getAllByRole("button");
   buttons.forEach((button) => {
-    const header = button.querySelector("h1");
+    const header = button.querySelector("p");
     expect(header).toHaveTextContent(/^.+$/);
   });
 });
