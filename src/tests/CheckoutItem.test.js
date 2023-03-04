@@ -127,33 +127,3 @@ test("Clicking the submit button causes the input to no longer be rendered", () 
   const inputAfter = screen.queryByDisplayValue("1");
   expect(inputAfter).toBeNull();
 });
-
-// Will probably have to save this for App.test.js
-
-// test("Submitting a new value changes the quantity", () => {
-//   render(
-//     <CheckoutItem
-//       data={data}
-//       champion="Aatrox"
-//       quantity={1}
-//       changeCartQuantity={changeCartQuantity}
-//     />
-//   );
-//   const oldQuantity = screen.getByText("1");
-//   const updateButton = screen.getByRole("button", { name: "Update" });
-//   expect(oldQuantity).toBeInTheDocument();
-//   act(() => {
-//     userEvent.click(updateButton);
-//   });
-//   const input = screen.getByDisplayValue("1");
-//   input.focus();
-//   act(() => {
-//     userEvent.keyboard("23");
-//   });
-//   const submitButton = screen.getByRole("button", { name: "Submit" });
-//   act(() => {
-//     userEvent.click(submitButton);
-//   });
-//   const newQuantity = screen.getByText("123");
-//   expect(newQuantity).toBeInTheDocument();
-// });
