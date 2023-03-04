@@ -4,6 +4,7 @@ import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import Checkout from "../pages/Checkout";
 import { BrowserRouter } from "react-router-dom";
+import { act } from "react-dom/test-utils";
 
 let data;
 
@@ -43,4 +44,23 @@ test("No items are displayed if the shopping cart is empty", () => {
   });
   const items = screen.queryAllByRole("listitem");
   expect(items.length).toBe(0);
+});
+
+test("An order can't be placed if the shopping cart is empty", () => {
+  const shoppingCartItems = {};
+  render(<Checkout data={data} shoppingCartItems={shoppingCartItems} />, {
+    wrapper: BrowserRouter,
+  });
+  const placeOrderButton = screen.getByRole("button", { name: "Place Order" });
+  act(() => {
+    userEvent.click(placeOrderButton);
+  });
+  const errorText = screen.getByText(
+    "Lollipoppy Kench forbids you from placing an empty order."
+  );
+  const errorImage = screen.getByAltText(
+    "pre-rework Lollipoppy'd face edited on to the default Tahm Kench splash art"
+  );
+  expect(errorText).toBeInTheDocument();
+  expect(errorImage).toBeInTheDocument();
 });
