@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import { act } from "react-dom/test-utils";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import ChampionModal from "../components/ChampionModal";
-import { act } from "react-dom/test-utils";
 
 const hideModal = jest.fn();
 const addToCart = jest.fn();

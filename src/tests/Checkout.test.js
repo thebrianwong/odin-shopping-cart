@@ -1,10 +1,10 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
+import { act } from "react-dom/test-utils";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import Checkout from "../pages/Checkout";
-import { BrowserRouter } from "react-router-dom";
-import { act } from "react-dom/test-utils";
 
 let data;
 

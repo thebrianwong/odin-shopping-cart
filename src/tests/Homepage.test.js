@@ -1,8 +1,8 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Homepage from "../pages/Homepage";
-import { BrowserRouter } from "react-router-dom";
 
 test("The page renders with the expected elements", () => {
   render(<Homepage />, { wrapper: BrowserRouter });

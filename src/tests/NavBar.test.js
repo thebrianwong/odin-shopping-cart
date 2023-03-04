@@ -1,8 +1,8 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import NavBar from "../components/NavBar";
-import { BrowserRouter } from "react-router-dom";
 
 test("There are 3 links", () => {
   render(<NavBar />, { wrapper: BrowserRouter });

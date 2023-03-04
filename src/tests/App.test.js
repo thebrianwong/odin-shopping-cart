@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import { act } from "react-dom/test-utils";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
-import { act } from "react-dom/test-utils";
 
 test("Go through user flow of placing an order for a champion", async () => {
   render(<App />);

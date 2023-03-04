@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import ShopContents from "../components/ShopContents";
 import ShopFilter from "../components/ShopFilter";
+import ShopContents from "../components/ShopContents";
 
 const Shop = ({ gameVersion, data, addToCart }) => {
   const [filteredChampions, setFilteredChampions] = useState(data);

@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import { act } from "react-dom/test-utils";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import CheckoutItem from "../components/CheckoutItem";
-import { act } from "react-dom/test-utils";
 
 let data;
 const changeCartQuantity = jest.fn();

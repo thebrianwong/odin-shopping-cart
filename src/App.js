@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import NavBar from "./components/NavBar";
 import Homepage from "./pages/Homepage";
 import Shop from "./pages/Shop";
-import NavBar from "./components/NavBar";
-import { useState, useEffect } from "react";
 import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
 
