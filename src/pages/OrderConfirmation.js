@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const OrderConfirmation = ({ clearShoppingCart }) => {
   const [inFakeLoading, setInFakeLoading] = useState(true);
-  const setTimer = (delay) => {
+  const startFakeLoading = (delay) => {
     new Promise((resolve) => setTimeout(resolve, delay)).then((resolve) =>
       setInFakeLoading(resolve, false)
     );
@@ -11,7 +11,7 @@ const OrderConfirmation = ({ clearShoppingCart }) => {
     clearShoppingCart();
   }, []);
   useEffect(() => {
-    setTimer((Math.random() + 1) * 1000);
+    startFakeLoading((Math.random() + 1) * 2000);
   }, []);
   return (
     <>
