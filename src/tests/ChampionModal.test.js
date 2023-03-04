@@ -30,7 +30,7 @@ test("Champion modal is rendered properly", async () => {
     />
   );
   const aatroxImage = await screen.findByAltText(
-    "Loading screen banner of Aatrox"
+    "Loading screen banner of Aatrox."
   );
   const aatroxName = screen.getByRole("heading", { name: "Aatrox" });
   const aatroxTitle = screen.getByText("the Darkin Blade");

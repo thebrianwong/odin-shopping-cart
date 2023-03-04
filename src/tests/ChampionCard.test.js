@@ -17,7 +17,7 @@ beforeAll(async () => {
 test("Champion card gets rendered properly", () => {
   render(<ChampionCard championData={aatroxData} />);
   const aatroxCard = screen.getByRole("button");
-  const aatroxImage = screen.getByAltText("Square portrait of Aatrox");
+  const aatroxImage = screen.getByAltText("Square portrait of Aatrox.");
   const aatroxName = screen.getByText("Aatrox");
   expect(aatroxCard).toBeInTheDocument();
   expect(aatroxImage).toBeInTheDocument();
