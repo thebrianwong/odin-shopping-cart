@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-const ChampionModal = ({ championData, hideModal, addToCart }) => {
+const ChampionModal = ({ gameVersion, championData, hideModal, addToCart }) => {
   const [quantity, setQuantity] = useState(1);
   const [championLore, setChampionData] = useState("");
   const [loadingData, setLoadingData] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       const rawData = await fetch(
-        `https://ddragon.leagueoflegends.com/cdn/13.4.1/data/en_US/champion/${championData.id}.json`
+        `https://ddragon.leagueoflegends.com/cdn/${gameVersion}/data/en_US/champion/${championData.id}.json`
       );
       const parsedJSON = await rawData.json();
       const championLore = parsedJSON.data[championData.id].lore;

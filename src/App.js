@@ -7,6 +7,7 @@ import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
 
 function App() {
+  const [gameVersion, setGameVersion] = useState(null);
   const [championData, setChampionData] = useState({});
   const [loadingData, setLoadingData] = useState(true);
   const [shoppingCart, setShoppingCart] = useState({});
@@ -66,9 +67,20 @@ function App() {
     return sortedShoppingCart;
   };
   useEffect(() => {
+    const fetchCurrentGameVersion = async () => {
+      const rawGameVersions = await fetch(
+        "https://ddragon.leagueoflegends.com/api/versions.json"
+      );
+      const parsedGameVersion = await rawGameVersions.json();
+      const currentGameVersion = parsedGameVersion[0];
+      setGameVersion(currentGameVersion);
+    };
+    fetchCurrentGameVersion();
+  }, []);
+  useEffect(() => {
     const fetchData = async () => {
       const rawData = await fetch(
-        "https://ddragon.leagueoflegends.com/cdn/13.4.1/data/en_US/champion.json"
+        `https://ddragon.leagueoflegends.com/cdn/${gameVersion}/data/en_US/champion.json`
       );
       const parsedJSON = await rawData.json();
       const unsortedChampionData = parsedJSON.data;
@@ -76,8 +88,10 @@ function App() {
       setChampionData(sortedChampionData);
       setLoadingData(false);
     };
-    fetchData();
-  }, []);
+    if (gameVersion) {
+      fetchData();
+    }
+  }, [gameVersion]);
   return (
     <BrowserRouter>
       <NavBar shoppingCartQuantity={calculateShoppingCartItems(shoppingCart)} />
@@ -87,7 +101,11 @@ function App() {
           path="/shop"
           element={
             !loadingData ? (
-              <Shop data={championData} addToCart={addChampionQuantity} />
+              <Shop
+                gameVersion={gameVersion}
+                data={championData}
+                addToCart={addChampionQuantity}
+              />
             ) : null
           }
         />

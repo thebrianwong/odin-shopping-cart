@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ShopContents from "../components/ShopContents";
 import ShopFilter from "../components/ShopFilter";
 
-const Shop = ({ data, addToCart }) => {
+const Shop = ({ gameVersion, data, addToCart }) => {
   const [filteredChampions, setFilteredChampions] = useState(data);
   const [activeTags, setActiveTags] = useState([]);
   const applyChampionFilter = () => {
@@ -42,7 +42,11 @@ const Shop = ({ data, addToCart }) => {
     <div>
       <h1>The Shop!</h1>
       <ShopFilter addFilter={addFilter} removeFilter={removeFilter} />
-      <ShopContents shopItems={filteredChampions} addToCart={addToCart} />
+      <ShopContents
+        gameVersion={gameVersion}
+        shopItems={filteredChampions}
+        addToCart={addToCart}
+      />
     </div>
   );
 };
