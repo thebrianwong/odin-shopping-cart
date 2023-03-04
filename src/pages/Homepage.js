@@ -11,7 +11,7 @@ const Homepage = () => {
       </p>
       <img
         src={require("../assets/lollipoppy_og.png")}
-        alt="cursed pre-rework splash art of Lollipoppy"
+        alt="Cursed pre-rework splash art of Lollipoppy."
       />
       <Link to="/shop">
         <button>Shop</button>

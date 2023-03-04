@@ -7,7 +7,7 @@ const CheckoutItem = ({ data, champion, quantity, changeCartQuantity }) => {
     <li>
       <img
         src={`https://ddragon.leagueoflegends.com/cdn/13.4.1/img/champion/${data[champion].id}.png`}
-        alt={`Square portrait of ${data[champion].name}`}
+        alt={`Square portrait of ${data[champion].name}.`}
       />
       <p>{champion}</p>
       {updating ? (
