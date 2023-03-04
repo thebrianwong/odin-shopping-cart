@@ -51,6 +51,8 @@ test("Empty message displays", () => {
       userEvent.click(checkbox);
     });
   });
-  const emptyMessage = screen.getByText("placeholder no items text");
+  const emptyMessage = screen.getByText(
+    "Poro doesn't think that sort of champion exists yet!"
+  );
   expect(emptyMessage).toBeInTheDocument();
 });

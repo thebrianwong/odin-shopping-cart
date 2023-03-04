@@ -22,10 +22,10 @@ test("The shopping cart items are displayed", () => {
     wrapper: BrowserRouter,
   });
   const items = screen.getAllByRole("listitem");
-  const aatroxImage = screen.getByAltText("Square portrait of Aatrox");
+  const aatroxImage = screen.getByAltText("Square portrait of Aatrox.");
   const aatroxName = screen.getByText("Aatrox");
   const aatroxQuantity = screen.getByText("1");
-  const ahriImage = screen.getByAltText("Square portrait of Ahri");
+  const ahriImage = screen.getByAltText("Square portrait of Ahri.");
   const ahriName = screen.getByText("Ahri");
   const ahriQuantity = screen.getByText("9");
   expect(items.length).toBe(2);
@@ -59,7 +59,7 @@ test("An order can't be placed if the shopping cart is empty", () => {
     "Lollipoppy Kench forbids you from placing an empty order."
   );
   const errorImage = screen.getByAltText(
-    "pre-rework Lollipoppy'd face edited on to the default Tahm Kench splash art"
+    "Pre-rework Lollipoppy's face edited on to the default Tahm Kench splash art."
   );
   expect(errorText).toBeInTheDocument();
   expect(errorImage).toBeInTheDocument();

@@ -26,7 +26,7 @@ test("Component renders properly", () => {
     />
   );
   const buttons = screen.getAllByRole("button");
-  const image = screen.getByAltText("Square portrait of Aatrox");
+  const image = screen.getByAltText("Square portrait of Aatrox.");
   const name = screen.getByText("Aatrox");
   const quantity = screen.getByText("1");
   expect(buttons.length).toBe(2);

@@ -14,7 +14,7 @@ test("The page renders with the expected elements", () => {
   );
   const button = screen.getByRole("button", { name: "Shop" });
   const image = screen.getByAltText(
-    "cursed pre-rework splash art of Lollipoppy"
+    "Cursed pre-rework splash art of Lollipoppy."
   );
   expect(title).toBeInTheDocument();
   expect(description).toBeInTheDocument();
