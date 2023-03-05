@@ -5,6 +5,8 @@ import Homepage from "./pages/Homepage";
 import Shop from "./pages/Shop";
 import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
+import "./styles/normalize.css";
+import "./styles/styles.css";
 
 function App() {
   const [gameVersion, setGameVersion] = useState(null);
