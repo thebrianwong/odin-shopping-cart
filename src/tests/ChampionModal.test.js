@@ -57,10 +57,9 @@ test("Changing input value via buttons works", async () => {
       addToCart={addToCart}
     />
   );
-  const buttons = await screen.findAllByRole("button");
-  const input = screen.getByDisplayValue("1");
-  const decrementButton = buttons[0];
-  const incrementButton = buttons[1];
+  const input = await screen.findByDisplayValue("1");
+  const decrementButton = screen.getByRole("button", { name: "-10" });
+  const incrementButton = screen.getByRole("button", { name: "+10" });
   act(() => {
     userEvent.click(incrementButton);
   });
