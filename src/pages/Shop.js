@@ -43,7 +43,7 @@ const Shop = ({ gameVersion, data, addToCart }) => {
       <div className="shop-main">
         <ShopFilter addFilter={addFilter} removeFilter={removeFilter} />
         <div className="shop-right">
-          <h1>The Shop!</h1>
+          <h1 className="shop-title">The Shop!</h1>
           <ShopContents
             gameVersion={gameVersion}
             shopItems={filteredChampions}
