@@ -4,7 +4,7 @@ const ShopContents = ({ gameVersion, shopItems, addToCart }) => {
   return (
     <>
       {Object.keys(shopItems).length > 0 ? (
-        <div>
+        <div className="shop-cards-section">
           {Object.keys(shopItems).map((item) => {
             return (
               <ChampionCard
