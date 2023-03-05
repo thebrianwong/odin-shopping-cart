@@ -14,7 +14,7 @@ const ShopFilter = ({ addFilter, removeFilter }) => {
   return (
     <div className="shop-filter-section">
       <div className="shop-filter-contents">
-        <label htmlFor="assassin">
+        <label htmlFor="assassin" className="shop-filter-label">
           Assassin
           <input
             onClick={(e) => changeFilter(e)}
@@ -22,7 +22,7 @@ const ShopFilter = ({ addFilter, removeFilter }) => {
             id="assassin"
           ></input>
         </label>
-        <label htmlFor="fighter">
+        <label htmlFor="fighter" className="shop-filter-label">
           Fighter
           <input
             onClick={(e) => changeFilter(e)}
@@ -30,7 +30,7 @@ const ShopFilter = ({ addFilter, removeFilter }) => {
             id="fighter"
           ></input>
         </label>
-        <label htmlFor="mage">
+        <label htmlFor="mage" className="shop-filter-label">
           Mage
           <input
             onClick={(e) => changeFilter(e)}
@@ -38,7 +38,7 @@ const ShopFilter = ({ addFilter, removeFilter }) => {
             id="mage"
           ></input>
         </label>
-        <label htmlFor="marksman">
+        <label htmlFor="marksman" className="shop-filter-label">
           Marksman
           <input
             onClick={(e) => changeFilter(e)}
@@ -46,7 +46,7 @@ const ShopFilter = ({ addFilter, removeFilter }) => {
             id="marksman"
           ></input>
         </label>
-        <label htmlFor="support">
+        <label htmlFor="support" className="shop-filter-label">
           Support
           <input
             onClick={(e) => changeFilter(e)}
@@ -54,7 +54,7 @@ const ShopFilter = ({ addFilter, removeFilter }) => {
             id="support"
           ></input>
         </label>
-        <label htmlFor="tank">
+        <label htmlFor="tank" className="shop-filter-label">
           Tank
           <input
             onClick={(e) => changeFilter(e)}
