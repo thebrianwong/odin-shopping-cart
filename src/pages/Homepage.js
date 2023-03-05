@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
-    <div>
+    <div className="homepage">
       <h1>Welcome to the Blue Essence Emporium!</h1>
       <p>
         Rito Games has blessed us with a special deal! Buy as many champions as
