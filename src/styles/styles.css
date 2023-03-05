@@ -12,6 +12,12 @@
   font-family: "Spiegel";
 }
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
 h1 {
   font-family: "Beaufort";
 }
@@ -56,11 +62,13 @@ a {
 .shop {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .shop-main {
   display: grid;
   grid-template-columns: 125px 1fr;
+  height: 100%;
 }
 
 .shop-left {
@@ -84,7 +92,13 @@ a {
   gap: 5px;
 }
 
+.shop-right {
+  margin-bottom: 30px
+}
 
+.shop-title {
+  margin-left: 10px
+}
 
 .shop-cards-section {
   display: flex;
