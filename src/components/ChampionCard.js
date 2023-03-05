@@ -5,7 +5,10 @@ const ChampionCard = ({ gameVersion, championData, addToCart }) => {
   const [displayingModal, setDisplayingModal] = useState(false);
   return (
     <>
-      <button onClick={() => setDisplayingModal(true)}>
+      <button
+        className="champion-card"
+        onClick={() => setDisplayingModal(true)}
+      >
         <img
           src={`https://ddragon.leagueoflegends.com/cdn/${gameVersion}/img/champion/${championData.id}.png`}
           alt={`Square portrait of ${championData.name}.`}

@@ -37,6 +37,7 @@ button {
 }
 
 button:hover {
+  background-color: #005A82;
   cursor: pointer;
 }
 
@@ -131,12 +132,11 @@ button:active {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  padding-bottom: 30px
+  padding: 10px 10px 30px
 }
 
 .shop-title {
   color: #F0E6D2;
-  margin-left: 10px
 }
 
 .shop-cards-section {
@@ -151,6 +151,17 @@ button:active {
   padding-left: 15px;
 }
 
+
+
+.champion-card {
+  background-color: #010A13;
+  padding: 10px;
+}
+
+.champion-card:hover {
+  background-color: #0397AB;
+  transform: scale(1.05);
+}
 
 .champion-modal-background {
   display: flex;
