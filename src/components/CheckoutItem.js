@@ -1,8 +1,20 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const CheckoutItem = ({ data, champion, quantity, changeCartQuantity }) => {
   const [inputQuantity, setInputQuantity] = useState(quantity);
   const [updating, setUpdating] = useState(false);
+  const inputElement = useRef(null);
+  const validateQuantity = () => {
+    if (inputQuantity !== "") {
+      changeCartQuantity(champion, inputQuantity);
+      setUpdating(false);
+    }
+  };
+  useEffect(() => {
+    if (updating) {
+      inputElement.current.focus();
+    }
+  }, [updating]);
   return (
     <li>
       <img
@@ -17,15 +29,14 @@ const CheckoutItem = ({ data, champion, quantity, changeCartQuantity }) => {
             min="0"
             value={inputQuantity}
             onChange={(e) => setInputQuantity(Number(e.target.value))}
-          />
-          <button
-            onClick={() => {
-              changeCartQuantity(champion, inputQuantity);
-              setUpdating(false);
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                validateQuantity();
+              }
             }}
-          >
-            Submit
-          </button>
+            ref={inputElement}
+          />
+          <button onClick={validateQuantity}>Submit</button>
         </>
       ) : (
         <>
