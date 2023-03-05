@@ -93,6 +93,10 @@ button:active {
   padding-top: 0.67em
 }
 
+.homepage-image {
+  display: block;
+}
+
 .shop {
   display: grid;
   grid-template-columns: 125px 1fr;

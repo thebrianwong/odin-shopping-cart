@@ -9,6 +9,9 @@ const Homepage = () => {
         you want for free! They're really real and will be delivered to your
         doorsteps!!!
       </p>
+      <Link to="/shop">
+        <button className="homepage-shop-button">Shop Now</button>
+      </Link>
       <p className="homepage-description-2">
         Don't take our word for it, ask this satisfied customer!!1!!!!11!!
       </p>
@@ -17,9 +20,6 @@ const Homepage = () => {
         src={require("../assets/images/lollipoppy_og.png")}
         alt="Cursed pre-rework splash art of Lollipoppy."
       />
-      <Link to="/shop">
-        <button className="homepage-shop-button">Shop</button>
-      </Link>
       <p className="homepage-credits">
         This is not real. All assets belong to Riot Games. Lollipoppy Kench is
         from this{" "}
