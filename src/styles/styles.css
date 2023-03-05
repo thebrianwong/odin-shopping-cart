@@ -7,7 +7,7 @@ a {
   align-items: center;
   position: sticky;
   background-color: #005A82;
-  box-shadow: 0 2px 20px black;
+  border-bottom: solid 1px #F0E6D2;
   top: 0;
   height: 5vh;
   gap: 20px;
@@ -46,6 +46,9 @@ a {
 }
 
 .shop-left {
+  background-color: #005A82;
+  border-right: solid 1px #F0E6D2;
+  color: #C89B3C;
   padding: 10px;
 }
 
