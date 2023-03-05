@@ -17,8 +17,13 @@ const ChampionModal = ({ gameVersion, championData, hideModal, addToCart }) => {
     fetchData();
   }, []);
   return !loadingData ? (
-    <div className="champion-modal-background">
-      <div className="champion-modal">
+    <div className="champion-modal-background" onClick={hideModal}>
+      <div
+        className="champion-modal"
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
         <div className="modal-left">
           <img
             src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${championData.id}_0.jpg`}
