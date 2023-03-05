@@ -7,7 +7,7 @@ import App from "../App";
 
 test("Go through user flow of placing an order for a champion", async () => {
   render(<App />);
-  const homepageShopButton = screen.getByRole("button", { name: "Shop" });
+  const homepageShopButton = screen.getByRole("button", { name: "Shop Now" });
   act(() => {
     userEvent.click(homepageShopButton);
   });

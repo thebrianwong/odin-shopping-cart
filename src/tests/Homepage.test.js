@@ -12,7 +12,7 @@ test("The page renders with the expected elements", () => {
   const description = screen.getByText(
     "Rito Games has blessed us with a special deal! Buy as many champions as you want for free! They're really real and will be delivered to your doorsteps!!!"
   );
-  const button = screen.getByRole("button", { name: "Shop" });
+  const button = screen.getByRole("button", { name: "Shop Now" });
   const image = screen.getByAltText(
     "Cursed pre-rework splash art of Lollipoppy."
   );
