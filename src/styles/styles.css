@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .nav-bar {
   display: flex;
   align-items: center;
