@@ -60,9 +60,17 @@ a {
 
 
 .homepage {
-  margin-left: 135px;
+  background-image: linear-gradient(#091428, #0A1428);
+  color: #A09B8C;
+  padding-left: 135px;
+  height: 100%;
 }
 
+.homepage-title {
+  color: #F0E6D2;
+  margin-top: 0;
+  padding-top: 0.67em
+}
 
 .shop {
   display: grid;
