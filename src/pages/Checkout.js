@@ -11,8 +11,8 @@ const Checkout = ({ data, shoppingCartItems, changeCartQuantity }) => {
     setCanPlaceOrder(Object.keys(shoppingCartItems).length);
   }, [shoppingCartItems]);
   return (
-    <div>
-      <h1>Checkout</h1>
+    <div className="checkout">
+      <h1 className="checkout-title">Checkout</h1>
       {canPlaceOrder ? (
         <ul>
           {Object.keys(shoppingCartItems).map((champion) => {
