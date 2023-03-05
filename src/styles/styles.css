@@ -1,0 +1,79 @@
+.champion-modal-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.champion-modal {
+  background-image: linear-gradient(#091428, #0A1428);
+  box-shadow: inset 0 0px 20px 2px black;
+  color: #A09B8C;
+  display: flex;
+  gap: 15px;
+  margin: 5vh auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 650px;
+  
+}
+
+.modal-left {
+  display: flex;
+  align-items: center;
+}
+
+.modal-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-close-button {
+  align-self: flex-end;
+}
+
+.modal-champion-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-name {
+  margin-bottom: 0;
+}
+
+.modal-title {
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.modal-lore {
+  text-align: justify;
+  line-height: 1.25;
+}
+
+.modal-cart-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: 50px;
+  gap: 15px;
+}
+
+.modal-price {
+  margin-bottom: 10px
+}
+
+.modal-quantity-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-add-to-cart-button {
+  align-self: flex-start;
+  margin-top: 10px;
+}
