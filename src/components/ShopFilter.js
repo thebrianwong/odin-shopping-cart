@@ -30,7 +30,7 @@ const ShopFilter = ({ addFilter, removeFilter }) => {
             id="fighter"
           ></input>
         </label>
-        <label>
+        <label htmlFor="mage">
           Mage
           <input
             onClick={(e) => changeFilter(e)}
@@ -38,7 +38,7 @@ const ShopFilter = ({ addFilter, removeFilter }) => {
             id="mage"
           ></input>
         </label>
-        <label>
+        <label htmlFor="marksman">
           Marksman
           <input
             onClick={(e) => changeFilter(e)}
@@ -46,7 +46,7 @@ const ShopFilter = ({ addFilter, removeFilter }) => {
             id="marksman"
           ></input>
         </label>
-        <label>
+        <label htmlFor="support">
           Support
           <input
             onClick={(e) => changeFilter(e)}
@@ -54,7 +54,7 @@ const ShopFilter = ({ addFilter, removeFilter }) => {
             id="support"
           ></input>
         </label>
-        <label>
+        <label htmlFor="tank">
           Tank
           <input
             onClick={(e) => changeFilter(e)}
