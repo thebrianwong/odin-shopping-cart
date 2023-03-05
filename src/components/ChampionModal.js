@@ -38,7 +38,11 @@ const ChampionModal = ({ gameVersion, championData, hideModal, addToCart }) => {
       >
         <div className="modal-left">
           <img
-            src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${championData.id}_0.jpg`}
+            src={
+              championData.id === "Fiddlesticks"
+                ? "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/FiddleSticks_0.jpg"
+                : `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${championData.id}_0.jpg`
+            }
             alt={`Loading screen banner of ${championData.id}.`}
           />
         </div>
