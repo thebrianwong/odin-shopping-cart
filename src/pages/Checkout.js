@@ -54,7 +54,7 @@ const Checkout = ({ data, shoppingCartItems, changeCartQuantity }) => {
         }}
         to="/orderconfirmation"
       >
-        <button>Place Order</button>
+        {!placedEmptyOrder ? <button>Place Order</button> : null}
       </Link>
     </div>
   );
