@@ -12,8 +12,8 @@ const ShopFilter = ({ addFilter, removeFilter }) => {
     }
   };
   return (
-    <div className="shop-filter-section">
-      <div className="shop-filter-contents">
+    <div className="shop-left">
+      <div className="shop-filter">
         <label htmlFor="assassin" className="shop-filter-label">
           Assassin
           <input

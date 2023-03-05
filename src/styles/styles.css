@@ -45,11 +45,11 @@ a {
   grid-template-columns: 125px 1fr;
 }
 
-.shop-filter-section {
+.shop-left {
   padding: 10px;
 }
 
-.shop-filter-contents {
+.shop-filter {
   display: flex;
   flex-direction: column;
   position: sticky;
