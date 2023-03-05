@@ -1,4 +1,7 @@
 .champion-modal-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   left: 0;
   top: 0;
@@ -14,11 +17,10 @@
   color: #A09B8C;
   display: flex;
   gap: 15px;
-  margin: 5vh auto;
+  margin-bottom: 10vh;
   padding: 20px;
   width: 80%;
   max-width: 650px;
-  
 }
 
 .modal-left {
