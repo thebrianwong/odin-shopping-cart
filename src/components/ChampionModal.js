@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ChampionModal = ({ gameVersion, championData, hideModal, addToCart }) => {
   const [quantity, setQuantity] = useState(1);
   const [championLore, setChampionData] = useState("");
   const [loadingData, setLoadingData] = useState(true);
+  const inputElement = useRef(null);
   useEffect(() => {
     const fetchData = async () => {
       const rawData = await fetch(
@@ -16,6 +17,11 @@ const ChampionModal = ({ gameVersion, championData, hideModal, addToCart }) => {
     };
     fetchData();
   }, []);
+  useEffect(() => {
+    if (!loadingData) {
+      inputElement.current.focus();
+    }
+  }, [loadingData]);
   return !loadingData ? (
     <div className="champion-modal-background" onClick={hideModal}>
       <div
@@ -58,6 +64,7 @@ const ChampionModal = ({ gameVersion, championData, hideModal, addToCart }) => {
                 min="1"
                 value={quantity}
                 onChange={(e) => setQuantity(e.target.value)}
+                ref={inputElement}
               />
               <button onClick={() => setQuantity(quantity + 10)}>+10</button>
             </div>
