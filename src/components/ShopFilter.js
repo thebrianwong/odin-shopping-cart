@@ -12,55 +12,57 @@ const ShopFilter = ({ addFilter, removeFilter }) => {
     }
   };
   return (
-    <div>
-      <label htmlFor="assassin">
-        Assassin
-        <input
-          onClick={(e) => changeFilter(e)}
-          type="checkbox"
-          id="assassin"
-        ></input>
-      </label>
-      <label htmlFor="fighter">
-        Fighter
-        <input
-          onClick={(e) => changeFilter(e)}
-          type="checkbox"
-          id="fighter"
-        ></input>
-      </label>
-      <label>
-        Mage
-        <input
-          onClick={(e) => changeFilter(e)}
-          type="checkbox"
-          id="mage"
-        ></input>
-      </label>
-      <label>
-        Marksman
-        <input
-          onClick={(e) => changeFilter(e)}
-          type="checkbox"
-          id="marksman"
-        ></input>
-      </label>
-      <label>
-        Support
-        <input
-          onClick={(e) => changeFilter(e)}
-          type="checkbox"
-          id="support"
-        ></input>
-      </label>
-      <label>
-        Tank
-        <input
-          onClick={(e) => changeFilter(e)}
-          type="checkbox"
-          id="tank"
-        ></input>
-      </label>
+    <div className="shop-filter-section">
+      <div className="shop-filter-contents">
+        <label htmlFor="assassin">
+          Assassin
+          <input
+            onClick={(e) => changeFilter(e)}
+            type="checkbox"
+            id="assassin"
+          ></input>
+        </label>
+        <label htmlFor="fighter">
+          Fighter
+          <input
+            onClick={(e) => changeFilter(e)}
+            type="checkbox"
+            id="fighter"
+          ></input>
+        </label>
+        <label>
+          Mage
+          <input
+            onClick={(e) => changeFilter(e)}
+            type="checkbox"
+            id="mage"
+          ></input>
+        </label>
+        <label>
+          Marksman
+          <input
+            onClick={(e) => changeFilter(e)}
+            type="checkbox"
+            id="marksman"
+          ></input>
+        </label>
+        <label>
+          Support
+          <input
+            onClick={(e) => changeFilter(e)}
+            type="checkbox"
+            id="support"
+          ></input>
+        </label>
+        <label>
+          Tank
+          <input
+            onClick={(e) => changeFilter(e)}
+            type="checkbox"
+            id="tank"
+          ></input>
+        </label>
+      </div>
     </div>
   );
 };
