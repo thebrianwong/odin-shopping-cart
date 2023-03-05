@@ -92,10 +92,15 @@ a {
 }
 
 .shop-right {
-  margin-bottom: 30px
+  background-image: url(../assets/images/shop_background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding-bottom: 30px
 }
 
 .shop-title {
+  color: #F0E6D2;
   margin-left: 10px
 }
 
