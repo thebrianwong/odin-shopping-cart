@@ -60,12 +60,6 @@ a {
 
 
 .shop {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.shop-main {
   display: grid;
   grid-template-columns: 125px 1fr;
   height: 100%;

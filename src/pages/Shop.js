@@ -40,16 +40,14 @@ const Shop = ({ gameVersion, data, addToCart }) => {
   }, [activeTags]);
   return (
     <div className="shop">
-      <div className="shop-main">
-        <ShopFilter addFilter={addFilter} removeFilter={removeFilter} />
-        <div className="shop-right">
-          <h1 className="shop-title">The Shop!</h1>
-          <ShopContents
-            gameVersion={gameVersion}
-            shopItems={filteredChampions}
-            addToCart={addToCart}
-          />
-        </div>
+      <ShopFilter addFilter={addFilter} removeFilter={removeFilter} />
+      <div className="shop-right">
+        <h1 className="shop-title">The Shop!</h1>
+        <ShopContents
+          gameVersion={gameVersion}
+          shopItems={filteredChampions}
+          addToCart={addToCart}
+        />
       </div>
     </div>
   );
