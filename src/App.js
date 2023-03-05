@@ -96,7 +96,10 @@ function App() {
   }, [gameVersion]);
   return (
     <BrowserRouter>
-      <NavBar shoppingCartQuantity={calculateShoppingCartItems(shoppingCart)} />
+      <NavBar
+        gameVersion={gameVersion}
+        shoppingCartQuantity={calculateShoppingCartItems(shoppingCart)}
+      />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route
