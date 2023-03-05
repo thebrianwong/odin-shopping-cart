@@ -1,3 +1,36 @@
+.shop {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-main {
+  display: grid;
+  grid-template-columns: 125px 1fr;
+}
+
+.shop-filter-section {
+  padding: 10px;
+}
+
+.shop-filter-contents {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 25px;
+  gap: 50px;
+}
+
+.shop-filter-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+
+
+
 .champion-modal-background {
   display: flex;
   justify-content: center;
