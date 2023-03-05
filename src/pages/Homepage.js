@@ -11,7 +11,7 @@ const Homepage = () => {
       </p>
       <p>Don't take our word for it, ask this satisfied customer!!1!!!!11!!</p>
       <img
-        src={require("../assets/lollipoppy_og.png")}
+        src={require("../assets/images/lollipoppy_og.png")}
         alt="Cursed pre-rework splash art of Lollipoppy."
       />
       <Link to="/shop">

@@ -33,7 +33,7 @@ const Checkout = ({ data, shoppingCartItems, changeCartQuantity }) => {
             <>
               <p>Lollipoppy Kench forbids you from placing an empty order.</p>
               <img
-                src={require("../assets/lollipoppy_kench.png")}
+                src={require("../assets/images/lollipoppy_kench.png")}
                 alt="Pre-rework Lollipoppy's face edited on to the default Tahm Kench splash art."
               />
             </>

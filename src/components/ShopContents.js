@@ -20,7 +20,7 @@ const ShopContents = ({ gameVersion, shopItems, addToCart }) => {
         <>
           <div>Poro doesn't think that sort of champion exists yet!</div>
           <img
-            src={require("../assets/poro_sticker_shock.png")}
+            src={require("../assets/images/poro_sticker_shock.png")}
             alt="Surprised Poro with an exclamation mark and sweat bead."
           />
         </>

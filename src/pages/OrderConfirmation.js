@@ -18,7 +18,7 @@ const OrderConfirmation = ({ clearShoppingCart }) => {
       <h1>Order Confirmation</h1>
       {inFakeLoading ? (
         <img
-          src={require("../assets/katarina_dance.gif")}
+          src={require("../assets/images/katarina_dance.gif")}
           alt="Classic dancing Katarina loading gif from the game shop."
         />
       ) : (
