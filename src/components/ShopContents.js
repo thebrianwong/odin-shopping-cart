@@ -18,7 +18,9 @@ const ShopContents = ({ gameVersion, shopItems, addToCart }) => {
         </div>
       ) : (
         <>
-          <div>Poro doesn't think that sort of champion exists yet!</div>
+          <p className="shop-poro-message">
+            Poro doesn't think that sort of champion exists yet!
+          </p>
           <img
             src={require("../assets/images/poro_sticker_shock.png")}
             alt="Surprised Poro with an exclamation mark and sweat bead."

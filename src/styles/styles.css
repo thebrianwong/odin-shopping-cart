@@ -105,6 +105,7 @@ a {
 }
 
 .shop-right {
+  color: #A09B8C;
   background-image: url(../assets/images/shop_background.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -125,7 +126,9 @@ a {
   gap: 30px;
 }
 
-
+.shop-poro-message {
+  padding-left: 15px;
+}
 
 
 .champion-modal-background {
@@ -144,7 +147,6 @@ a {
 .champion-modal {
   background-image: linear-gradient(#091428, #0A1428);
   box-shadow: inset 0 0px 20px 2px black;
-  color: #A09B8C;
   display: flex;
   gap: 15px;
   margin-bottom: 10vh;
