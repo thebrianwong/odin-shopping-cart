@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Beaufort";
+  src: local("Beaufort"), url("../assets/fonts/BeaufortforLOL-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Spiegel";
+  src: local("Spiegel"), url("../assets/fonts/Spiegel_TT_Regular.ttf") format("truetype");
+}
+
+:root {
+  font-family: "Spiegel";
+}
+
+h1 {
+  font-family: "Beaufort";
+}
+
 a {
   text-decoration: none;
 }
