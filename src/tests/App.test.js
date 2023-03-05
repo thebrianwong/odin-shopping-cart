@@ -28,7 +28,7 @@ test("Go through user flow of placing an order for a champion", async () => {
   act(() => {
     userEvent.click(addToCartButton);
   });
-  const shoppingCartItems = screen.getByText("Number of items in cart: 1");
+  const shoppingCartItems = screen.getByText("1");
   expect(shoppingCartItems).toBeInTheDocument();
   const checkoutButton = screen.getByRole("button", { name: "Checkout" });
   act(() => {
@@ -38,7 +38,7 @@ test("Go through user flow of placing an order for a champion", async () => {
   act(() => {
     userEvent.click(placeOrderButton);
   });
-  const emptyShoppingCart = screen.getByText("Number of items in cart: 0");
+  const emptyShoppingCart = screen.getByText("0");
   expect(emptyShoppingCart).toBeInTheDocument();
   const orderConfirmation = screen.getByRole("heading", {
     name: "Order Confirmation",

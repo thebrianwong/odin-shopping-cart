@@ -19,6 +19,6 @@ test("There is a checkout button", () => {
 
 test("The correct number of cart items is displayed", () => {
   render(<NavBar shoppingCartQuantity={3} />, { wrapper: BrowserRouter });
-  const displayedItems = screen.getByText("Number of items in cart: 3");
-  expect(displayedItems.classList.contains("cart-items")).toBeTruthy();
+  const displayedItems = screen.getByText("3");
+  expect(displayedItems.classList.contains("nav-bar-quantity")).toBeTruthy();
 });
