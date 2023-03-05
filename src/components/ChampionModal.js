@@ -5,6 +5,12 @@ const ChampionModal = ({ gameVersion, championData, hideModal, addToCart }) => {
   const [championLore, setChampionData] = useState("");
   const [loadingData, setLoadingData] = useState(true);
   const inputElement = useRef(null);
+  const validateQuantity = () => {
+    if (quantity !== "" && quantity > 0) {
+      addToCart(championData.id, quantity);
+      hideModal();
+    }
+  };
   useEffect(() => {
     const fetchData = async () => {
       const rawData = await fetch(
@@ -64,17 +70,18 @@ const ChampionModal = ({ gameVersion, championData, hideModal, addToCart }) => {
                 min="1"
                 value={quantity}
                 onChange={(e) => setQuantity(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    validateQuantity();
+                  }
+                }}
                 ref={inputElement}
               />
               <button onClick={() => setQuantity(quantity + 10)}>+10</button>
             </div>
             <button
               className="modal-add-to-cart-button"
-              onClick={() => {
-                if (quantity !== "" && quantity > 0) {
-                  addToCart(championData.id, quantity);
-                }
-              }}
+              onClick={validateQuantity}
             >
               Add To Cart
             </button>
