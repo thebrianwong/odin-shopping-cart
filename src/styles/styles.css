@@ -10,6 +10,7 @@
 
 :root {
   font-family: "Spiegel";
+  scrollbar-width: 10px;
 }
 
 html,
@@ -29,13 +30,15 @@ a {
 .nav-bar {
   display: flex;
   align-items: center;
-  position: sticky;
+  position: fixed;
   background-color: #005A82;
   border-bottom: solid 1px #F0E6D2;
+  box-sizing: border-box;
   top: 0;
-  height: 5vh;
+  height: 90px;
   gap: 20px;
   padding: 15px 30px;
+  width: 100%;
 }
 
 .nav-bar-yellow {
@@ -64,6 +67,7 @@ a {
   color: #A09B8C;
   padding-left: 135px;
   height: 100%;
+  margin-top: 90px;
 }
 
 .homepage-title {
@@ -76,6 +80,7 @@ a {
   display: grid;
   grid-template-columns: 125px 1fr;
   height: 100%;
+  margin-top: 90px;
 }
 
 .shop-left {
