@@ -39,14 +39,16 @@ const Shop = ({ gameVersion, data, addToCart }) => {
     applyChampionFilter();
   }, [activeTags]);
   return (
-    <div>
+    <div className="shop">
       <h1>The Shop!</h1>
-      <ShopFilter addFilter={addFilter} removeFilter={removeFilter} />
-      <ShopContents
-        gameVersion={gameVersion}
-        shopItems={filteredChampions}
-        addToCart={addToCart}
-      />
+      <div className="shop-main">
+        <ShopFilter addFilter={addFilter} removeFilter={removeFilter} />
+        <ShopContents
+          gameVersion={gameVersion}
+          shopItems={filteredChampions}
+          addToCart={addToCart}
+        />
+      </div>
     </div>
   );
 };
