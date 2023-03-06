@@ -25,8 +25,8 @@ const Homepage = () => {
         alt="Cursed pre-rework splash art of Lollipoppy."
       />
       <p className="homepage-credits">
-        This is not real. All assets belong to Riot Games. Lollipoppy Kench is
-        from this{" "}
+        This is not real. No financial transactions are facilitated. All assets
+        belong to Riot Games. Lollipoppy Kench is from this{" "}
         <a href="https://www.reddit.com/r/leagueoflegends/comments/dmvin3/lollipoppy_is_on_sale_right_now_alongside_all_the/">
           Reddit thread
         </a>
