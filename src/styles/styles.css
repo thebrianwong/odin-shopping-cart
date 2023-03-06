@@ -377,4 +377,33 @@ button:active {
   .modal-add-to-cart-button {
     align-self: center;
   }
+  .checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .checkout-empty-order-image {
+    max-width: 80vw;
+    width: auto;
+  }
+  .checkout-order-info-section {
+    align-self: center;
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+  .checkout-list-item {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 80vw;
+    gap: 10px;
+  }
+  .checkout-list-item-input {
+    margin-left: 0;
+    width: 100px;
+  }
+  .confirmation {
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
 }
