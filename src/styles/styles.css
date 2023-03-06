@@ -313,6 +313,13 @@ button:active {
 }
 
 @media (max-width: 700px) {
+  .homepage {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 0 30px;
+  }
   .shop {
     display: flex;
     flex-direction: column;
