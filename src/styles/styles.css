@@ -79,8 +79,6 @@ button:active {
   margin-left: auto;
 }
 
-
-
 .homepage {
   background-image: linear-gradient(#091428, #0A1428);
   color: #A09B8C;
@@ -147,9 +145,6 @@ button:active {
   align-content: flex-start;
   gap: 30px;
 }
-
-
-
 
 .champion-card {
   background-color: #010A13;
@@ -243,9 +238,6 @@ button:active {
   margin-top: 10px;
 }
 
-
-
-
 .checkout {
   background-image: linear-gradient(#091428, #0A1428);
   color: #A09B8C;
@@ -303,11 +295,7 @@ button:active {
 
 .checkout-place-order-button-link {
   align-self: end;
-  /* margin-top: 100px; */
 }
-
-
-
 
 .confirmation {
   background-image: linear-gradient(#091428, #0A1428);
