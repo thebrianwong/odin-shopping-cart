@@ -347,4 +347,27 @@ button:active {
     margin-left: auto;
     margin-right: auto;
   }
+  .champion-modal {
+    margin-bottom: 0;
+    width: 50%;
+    max-height: 85vh;
+  }
+  .modal-left {
+    display: none;
+  }
+  .modal-name {
+    margin-top: 0;
+  }
+  .modal-title {
+    margin-bottom: 0;
+  }
+  .modal-lore {
+    margin-bottom: 0;
+  }
+  .modal-cart-section {
+    margin-bottom: 0;
+  }
+  .modal-add-to-cart-button {
+    align-self: center;
+  }
 }
