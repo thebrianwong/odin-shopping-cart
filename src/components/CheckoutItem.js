@@ -16,12 +16,12 @@ const CheckoutItem = ({ data, champion, quantity, changeCartQuantity }) => {
     }
   }, [updating]);
   return (
-    <li>
+    <li className="checkout-list-item">
       <img
         src={`https://ddragon.leagueoflegends.com/cdn/13.4.1/img/champion/${data[champion].id}.png`}
         alt={`Square portrait of ${data[champion].name}.`}
       />
-      <p>{champion}</p>
+      <p className="checkout-list-item-name">{champion}</p>
       {updating ? (
         <>
           <input
@@ -40,11 +40,19 @@ const CheckoutItem = ({ data, champion, quantity, changeCartQuantity }) => {
         </>
       ) : (
         <>
-          <p>{quantity}</p>
-          <button onClick={() => setUpdating(true)}>Update</button>
+          <p className="checkout-list-item-quantity">{quantity}</p>
+          <button
+            className="checkout-list-item-update-button"
+            onClick={() => setUpdating(true)}
+          >
+            Update
+          </button>
         </>
       )}
-      <button onClick={() => changeCartQuantity(champion, 0)}>
+      <button
+        className="checkout-list-item-remove-button"
+        onClick={() => changeCartQuantity(champion, 0)}
+      >
         Remove Item
       </button>
     </li>

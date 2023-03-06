@@ -14,7 +14,7 @@ const Checkout = ({ data, shoppingCartItems, changeCartQuantity }) => {
     <div className="checkout">
       <h1 className="checkout-title">Checkout</h1>
       {canPlaceOrder ? (
-        <ul>
+        <ul className="checkout-list">
           {Object.keys(shoppingCartItems).map((champion) => {
             return (
               <CheckoutItem
