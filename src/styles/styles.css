@@ -57,6 +57,7 @@ button:active {
   gap: 20px;
   padding: 15px 30px;
   width: 100%;
+  z-index: 1;
 }
 
 .nav-bar-yellow {
