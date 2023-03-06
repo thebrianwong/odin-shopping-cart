@@ -255,6 +255,7 @@ button:active {
   padding-left: 135px;
   padding-bottom: 100px;
   padding-right: 400px;
+  min-height: 100%;
 }
 
 .checkout-title {
