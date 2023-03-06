@@ -45,7 +45,7 @@ const Checkout = ({ data, shoppingCartItems, changeCartQuantity }) => {
           )}
         </>
       )}
-      <div class="checkout-order-info-section">
+      <div className="checkout-order-info-section">
         {canPlaceOrder ? <p className="checkout-total">Total = FREE</p> : null}
         <Link
           className="checkout-place-order-button-link"
