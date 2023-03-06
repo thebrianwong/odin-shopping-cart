@@ -305,3 +305,20 @@ button:active {
   align-self: end;
   /* margin-top: 100px; */
 }
+
+
+
+
+.confirmation {
+  background-image: linear-gradient(#091428, #0A1428);
+  color: #A09B8C;
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 135px;
+  min-height: 100%;
+}
+
+.confirmation-loading {
+  width: fit-content;
+}

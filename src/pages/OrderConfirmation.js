@@ -9,15 +9,17 @@ const OrderConfirmation = ({ clearShoppingCart }) => {
   };
   useEffect(() => {
     clearShoppingCart();
+    window.scrollTo(0, 0);
   }, []);
   useEffect(() => {
     startFakeLoading((Math.random() + 1) * 2000);
   }, []);
   return (
-    <>
+    <div className="confirmation">
       <h1>Order Confirmation</h1>
       {inFakeLoading ? (
         <img
+          className="confirmation-loading"
           src={require("../assets/images/katarina_dance.gif")}
           alt="Classic dancing Katarina loading gif from the game shop."
         />
@@ -30,7 +32,7 @@ const OrderConfirmation = ({ clearShoppingCart }) => {
           </p>
         </>
       )}
-    </>
+    </div>
   );
 };
 
