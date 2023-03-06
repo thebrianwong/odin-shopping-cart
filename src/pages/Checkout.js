@@ -8,6 +8,9 @@ const Checkout = ({ data, shoppingCartItems, changeCartQuantity }) => {
   );
   const [placedEmptyOrder, setPlacedEmptyOrder] = useState(false);
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
     setCanPlaceOrder(Object.keys(shoppingCartItems).length);
   }, [shoppingCartItems]);
   return (

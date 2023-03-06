@@ -36,6 +36,9 @@ const Shop = ({ gameVersion, data, addToCart }) => {
     );
   };
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
     applyChampionFilter();
   }, [activeTags]);
   return (
