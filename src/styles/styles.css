@@ -381,6 +381,7 @@ button:active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     padding: 0;
   }
   .checkout-empty-order-image {
@@ -405,5 +406,40 @@ button:active {
     align-items: center;
     text-align: center;
     padding: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav-bar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px;
+    gap: 5px;
+  }
+  .nav-bar * {
+    margin: 0;
+  }
+  .shop-left {
+    display: flex;
+    height: auto;
+  }
+  .shop-filter {
+    flex-wrap: wrap;
+    padding: 5px;
+    gap: 5px;
+  }
+  .shop-poro-image {
+    max-width: 100%;
+    height: auto;
+  }
+  .champion-modal {
+    flex-direction: column;
+  }
+  .modal-lore {
+    overflow: scroll;
+    height: 250px;
+  }
+  .modal-quantity-buttons input {
+    max-width: 50px;
   }
 }
