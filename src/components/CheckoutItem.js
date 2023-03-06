@@ -25,6 +25,7 @@ const CheckoutItem = ({ data, champion, quantity, changeCartQuantity }) => {
       {updating ? (
         <>
           <input
+            className="checkout-list-item-input"
             type="number"
             min="0"
             value={inputQuantity}
@@ -36,11 +37,13 @@ const CheckoutItem = ({ data, champion, quantity, changeCartQuantity }) => {
             }}
             ref={inputElement}
           />
+          <p></p>
           <button onClick={validateQuantity}>Submit</button>
         </>
       ) : (
         <>
           <p className="checkout-list-item-quantity">{quantity}</p>
+          <p> x FREE = FREE</p>
           <button
             className="checkout-list-item-update-button"
             onClick={() => setUpdating(true)}

@@ -248,13 +248,12 @@ button:active {
 .checkout {
   background-image: linear-gradient(#091428, #0A1428);
   color: #A09B8C;
-  height: 100%;
   margin-top: 90px;
-  padding-left: 135px;
-
   display: flex;
   flex-direction: column;
-  padding-right: 431px;
+  padding-left: 135px;
+  padding-bottom: 100px;
+  padding-right: 400px;
 }
 
 .checkout-title {
@@ -272,7 +271,7 @@ button:active {
 
 .checkout-list-item {
   display: grid;
-  grid-template-columns: 120px 100px 50px 1fr 1fr;
+  grid-template-columns: 120px 100px 50px 150px 1fr 1fr;
   justify-items: center;
   align-items: center;
   gap: 50px;
@@ -282,4 +281,25 @@ button:active {
   width: fit-content;
   height: fit-content;
   justify-self: end;
+}
+
+.checkout-list-item-input {
+  margin-left: 150px;
+}
+
+.checkout-order-info-section {
+  align-self: end;
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  gap: 100px;
+}
+
+.checkout-total {
+  margin: 0;
+}
+
+.checkout-place-order-button-link {
+  align-self: end;
+  /* margin-top: 100px; */
 }

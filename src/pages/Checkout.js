@@ -45,17 +45,23 @@ const Checkout = ({ data, shoppingCartItems, changeCartQuantity }) => {
           )}
         </>
       )}
-      <Link
-        onClick={(e) => {
-          if (!canPlaceOrder) {
-            e.preventDefault();
-            setPlacedEmptyOrder(true);
-          }
-        }}
-        to="/orderconfirmation"
-      >
-        {!placedEmptyOrder ? <button>Place Order</button> : null}
-      </Link>
+      <div class="checkout-order-info-section">
+        {canPlaceOrder ? <p className="checkout-total">Total = FREE</p> : null}
+        <Link
+          className="checkout-place-order-button-link"
+          onClick={(e) => {
+            if (!canPlaceOrder) {
+              e.preventDefault();
+              setPlacedEmptyOrder(true);
+            }
+          }}
+          to="/orderconfirmation"
+        >
+          {!placedEmptyOrder ? (
+            <button className="checkout-place-order-button">Place Order</button>
+          ) : null}
+        </Link>
+      </div>
     </div>
   );
 };
