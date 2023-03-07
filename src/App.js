@@ -97,7 +97,7 @@ function App() {
     }
   }, [gameVersion]);
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <NavBar
         gameVersion={gameVersion}
         shoppingCartQuantity={calculateShoppingCartItems(shoppingCart)}
@@ -117,7 +117,7 @@ function App() {
           }
         />
         <Route
-          path="checkout"
+          path="/checkout"
           element={
             <Checkout
               data={championData}
@@ -127,7 +127,7 @@ function App() {
           }
         />
         <Route
-          path="orderconfirmation"
+          path="/orderconfirmation"
           element={<OrderConfirmation clearShoppingCart={clearShoppingCart} />}
         />
       </Routes>
