@@ -342,9 +342,9 @@ button:active {
   }
   .shop-filter {
     flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 30px;
-    gap: 25px;
+    justify-content: space-evenly;
+    padding: 10px 5px;
+    gap: 5px;
   }
   .shop-right {
     flex: 1;
