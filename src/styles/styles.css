@@ -131,7 +131,7 @@ button:active {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  padding: 10px 10px 30px
+  padding: 0 10px 30px
 }
 
 .shop-title {
@@ -253,7 +253,6 @@ button:active {
 
 .checkout-title {
   color: #F0E6D2;
-  padding-top: 0.67em;
 }
 
 .checkout-list {
