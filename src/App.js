@@ -97,7 +97,7 @@ function App() {
     }
   }, [gameVersion]);
   return (
-    <BrowserRouter basename="/odin-shopping-cart">
+    <BrowserRouter basename="/">
       <NavBar
         gameVersion={gameVersion}
         shoppingCartQuantity={calculateShoppingCartItems(shoppingCart)}
