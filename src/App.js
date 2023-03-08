@@ -97,15 +97,15 @@ function App() {
     }
   }, [gameVersion]);
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/odin-shopping-cart">
       <NavBar
         gameVersion={gameVersion}
         shoppingCartQuantity={calculateShoppingCartItems(shoppingCart)}
       />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/odin-shopping-cart" element={<Homepage />} />
         <Route
-          path="/shop"
+          path="/odin-shopping-cart/shop"
           element={
             !loadingData ? (
               <Shop
@@ -117,7 +117,7 @@ function App() {
           }
         />
         <Route
-          path="/checkout"
+          path="/odin-shopping-cart/checkout"
           element={
             <Checkout
               data={championData}
@@ -127,7 +127,7 @@ function App() {
           }
         />
         <Route
-          path="/orderconfirmation"
+          path="/odin-shopping-cart/orderconfirmation"
           element={<OrderConfirmation clearShoppingCart={clearShoppingCart} />}
         />
       </Routes>

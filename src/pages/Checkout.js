@@ -59,7 +59,7 @@ const Checkout = ({ data, shoppingCartItems, changeCartQuantity }) => {
               setPlacedEmptyOrder(true);
             }
           }}
-          to="/orderconfirmation"
+          to="/odin-shopping-cart/orderconfirmation"
         >
           {!placedEmptyOrder ? (
             <button className="checkout-place-order-button">Place Order</button>

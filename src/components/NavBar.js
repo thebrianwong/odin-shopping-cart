@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 const NavBar = ({ gameVersion, shoppingCartQuantity }) => {
   return (
     <div className="nav-bar">
-      <Link to="/">
+      <Link to="/odin-shopping-cart">
         <span className="nav-bar-home nav-bar-yellow">Home</span>
       </Link>
-      <Link to="/shop">
+      <Link to="/odin-shopping-cart/shop">
         <span className="nav-bar-shop nav-bar-yellow">Shop</span>
       </Link>
       <p className="nav-bar-patch nav-bar-gray">Based on Patch {gameVersion}</p>
@@ -16,7 +16,7 @@ const NavBar = ({ gameVersion, shoppingCartQuantity }) => {
           {shoppingCartQuantity}
         </span>
       </p>
-      <Link to="checkout">
+      <Link to="/odin-shopping-cart/checkout">
         <button>Checkout</button>
       </Link>
     </div>

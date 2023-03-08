@@ -13,7 +13,7 @@ const Homepage = () => {
         you want for free! They're really real and will be delivered to your
         doorsteps!!!
       </p>
-      <Link to="/shop">
+      <Link to="/odin-shopping-cart/shop">
         <button className="homepage-shop-button">Shop Now</button>
       </Link>
       <p className="homepage-description-2">
